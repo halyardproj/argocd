@@ -14,8 +14,7 @@ spec:
       paths:
       - backend:
           serviceName: zack
-          servicePort: https
-        path: /
+          servicePort: 80
   tls:
   - hosts:
     - zack.k8s.halyard.app
