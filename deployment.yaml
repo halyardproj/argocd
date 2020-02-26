@@ -13,7 +13,7 @@ spec:
         app: zack
     spec:
       containers:
-      - name:  go-docker
+      - name:  zack
         image: gcr.io/halyard-269216/go-docker
         ports:
         - containerPort: 80
