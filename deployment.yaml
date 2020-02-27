@@ -1,19 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: zack
+  labels:
+    app.kubernetes.io/name: zvarner
+  name: zvarner
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: zack
+      app.kubernetes.io/name: zvarner
   template:
     metadata:
       labels:
-        app: zack
+        app.kubernetes.io/name: zvarner
     spec:
       containers:
-      - name:  zack
+      - name:  zvarner
         image: gcr.io/halyard-269216/go-docker
         ports:
-        - containerPort: 80
+        - containerPort: 8080
